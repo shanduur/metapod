@@ -1,6 +1,6 @@
 [package]
 name = "metapod"
-version = "0.0.0"
+version = "0.1.0"
 authors = ["Mateusz Urbanek <mateusz.urbanek.98@gmail.com>"]
 edition = "2021"
 license = "Apache-2.0"
