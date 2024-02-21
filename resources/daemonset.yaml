@@ -6,7 +6,6 @@ spec:
   selector:
     matchLabels:
       name: metapod-daemons
-      version: canary
   template:
     metadata:
       labels:
