@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: metapod-daemons
+spec:
+  selector:
+    matchLabels:
+      name: metapod-daemons
+  template:
+    metadata:
+      labels:
+        name: metapod-daemons
+    spec:
+      tolerations:
+        - key: node-role.kubernetes.io/control-plane
+          operator: Exists
+          effect: NoSchedule
+        - key: node-role.kubernetes.io/master
+          operator: Exists
+          effect: NoSchedule
+      containers:
+        - name: metapod-daemons
+          image: ghcr.io/shanduur/metapod:canary
+          resources: {}

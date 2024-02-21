@@ -7,7 +7,7 @@ license = "Apache-2.0"
 
 [[bin]]
 doc = false
-name = "controller"
+name = "metapod"
 path = "src/main.rs"
 
 [dependencies]

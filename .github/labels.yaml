@@ -17,6 +17,9 @@
 - name: area/dependency
   color: '#0052cc'
   description: Issues or PRs related to dependency changes.
+- name: area/resources
+  color: '#0052cc'
+  description: Issues or PRs related to Kubernetes resources.
 - name: area/operator
   color: '#0052cc'
   description: Issues or PRs related to operator code.

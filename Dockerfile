@@ -37,7 +37,7 @@ RUN cargo build --release
 #########################################################################################
 
 # Second stage: building final environment for running the executable.
-FROM docker.io/library/debian:stable-slim AS runtime
+FROM docker.io/rockylinux/rockylinux:9-ubi-micro AS runtime
 
 # Copy the executable.
 COPY --from=builder --chown=65532:65532 /work/target/release/metapod /usr/bin/metapod
@@ -50,7 +50,7 @@ HEALTHCHECK NONE
 
 # Add labels
 LABEL name="metapod"
-LABEL description="Metapod - a metadata controller for Kubernetes"
+LABEL description="Metapod - a metadata controller for Kubernetes on Proxmox VE"
 LABEL license="Apache-2.0"
 LABEL maintainers="Mateusz Urbanek <mateusz.urbanek.98@gmail.com>"
 
