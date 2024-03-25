@@ -17,7 +17,7 @@
 #########################################################################################
 
 # First stage: building the driver executable.
-FROM docker.io/library/rust:1.76.0 AS builder
+FROM docker.io/library/rust:1.77.0 AS builder
 
 # Set the working directory.
 WORKDIR /work
